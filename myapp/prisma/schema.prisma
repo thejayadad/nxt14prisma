@@ -64,9 +64,9 @@ model Exercise {
   name      String
   desc      String?
   mood      String    
-  duration  Int
+  duration  String
   color     String
-  date      DateTime
+  date      String?
   userEmail String
   user      User      @relation(fields: [userEmail], references: [email])
 }

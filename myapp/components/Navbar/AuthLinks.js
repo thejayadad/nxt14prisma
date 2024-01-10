@@ -9,7 +9,7 @@ import LoginWithGoogle from '../buttons/LoginWithGoogle';
 
 const AuthLinks = async () => {
     const session = await getServerSession(authOptions);
-    const email = session.user.email
+    const email = session?.user.email
   return (
    <div className='flex items-center gap-2'>
    {!!session && (
@@ -19,9 +19,6 @@ const AuthLinks = async () => {
               href={'/dashboard/${email}'}>
                 Hello, {session?.user?.name}
               </Link>
-              <Link
-              className='links'
-              href={'/create'}>Create</Link>
               <LogoutButton />
             </>
           )}

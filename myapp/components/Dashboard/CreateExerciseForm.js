@@ -16,6 +16,7 @@ const CreateExerciseForm = () => {
           <input
             type="text"
             id="name"
+            name='name'
             className="form_inputs"
             placeholder="Name..."
           />
@@ -28,6 +29,7 @@ const CreateExerciseForm = () => {
             </label>
             <input
               type="number"
+              name='duration'
               id="duration"
               className="form_inputs"
               placeholder="Duration..."
@@ -41,6 +43,7 @@ const CreateExerciseForm = () => {
             <input
               type="date"
               id="date"
+              name='date'
               className="form_inputs"
               placeholder="Date..."
             />
@@ -54,6 +57,7 @@ const CreateExerciseForm = () => {
           <input
             type="text"
             id="mood"
+            name='mood'
             className="form_inputs"
             placeholder="Mood..."
           />
@@ -66,8 +70,21 @@ const CreateExerciseForm = () => {
           <input
             type="text"
             id="color"
+            name='color'
             className="form_inputs"
             placeholder="Color..."
+          />
+        </div>
+        <div className="mb-4">
+          <label className="form_label" htmlFor="desc">
+            Description
+          </label>
+          <input
+            type="text"
+            id="desc"
+            name='desc'
+            className="form_inputs"
+            placeholder="Description..."
           />
         </div>
 
