@@ -46,6 +46,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  Exercise      Exercise[]
 
 }
 
@@ -55,4 +56,17 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model Exercise {
+  id        String    @id @default(cuid()) @map("_id")
+  createdAt DateTime  @default(now())
+  name      String
+  desc      String?
+  mood      String    
+  duration  Int
+  color     String
+  date      DateTime
+  userEmail String
+  user      User      @relation(fields: [userEmail], references: [email])
 }

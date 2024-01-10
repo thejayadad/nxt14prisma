@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import {FiPlusCircle} from 'react-icons/fi'
+import {FiPlusCircle, FiX} from 'react-icons/fi'
 import CreateExerciseForm from './CreateExerciseForm'
 
 const CreateExercise = () => {
@@ -17,7 +17,9 @@ const CreateExercise = () => {
     <p className="py-4">Share Your Exercise Below</p>
     <CreateExerciseForm />
     <div className="modal-action">
-      <label htmlFor="my_modal_6" className="btn bg-red-400 text-black">Close</label>
+      <label htmlFor="my_modal_6" className="text-grey">
+        <FiX />
+      </label>
     </div>
   </div>
 </div>

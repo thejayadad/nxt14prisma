@@ -1,4 +1,5 @@
 import CreateExercise from '@/components/Dashboard/CreateExercise'
+import NoWorkoutsMessage from '@/components/Dashboard/NoWorkoutsMessage'
 import HeadingText from '@/components/HeadingText'
 import getServerUser from '@/lib/getServerUser'
 import React from 'react'
@@ -17,7 +18,9 @@ const Dashboard = async () => {
            />
            <CreateExercise />
            </div>
-
+          <div className='py-24 flex justify-center'>
+           <NoWorkoutsMessage />
+          </div>
         </div>
     </section>
   )
