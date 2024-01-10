@@ -6,7 +6,7 @@ export default function LogoutButton({
 }) {
   return (
     <button
-      className={className}
+      className='links'
       onClick={() => signOut()}>
       <span>Logout</span>
 
