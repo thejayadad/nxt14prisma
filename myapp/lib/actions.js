@@ -13,7 +13,7 @@ export const addExercise = async (formData) => {
     Object.fromEntries(formData);
     
     try {
-        const newExercise = await prisma.exercise.create({
+         await prisma.exercise.create({
             data: {
               name,
               desc,
@@ -24,10 +24,11 @@ export const addExercise = async (formData) => {
               userEmail: email, 
             },
           });
-          return newExercise;
+          revalidatePath("/")
+          
     } catch (error) {
         throw new Error("Failed To Create Exercise " + error)
     }
     revalidatePath("/")
-    redirect("/")
+    redirect(`/dashboard/${email}`)
 }

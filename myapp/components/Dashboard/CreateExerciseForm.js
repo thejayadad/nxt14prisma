@@ -90,10 +90,12 @@ const CreateExerciseForm = () => {
 
         <button 
         type='submit'
-          style={{ width: '470px'}}
-          className='flex btn btn-wide bg-primary text-white'
+          // style={{ maxWidth: '1200px'}}
+          className='flex btn bg-primary text-white w-full'
         >
-          <FiPlusCircle />
+          <FiPlusCircle
+          className='text-2xl'
+          />
           <span>Create</span>
         </button>
       </form>
